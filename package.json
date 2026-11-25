@@ -1,0 +1,32 @@
+{
+  "name": "photo-valentin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Повноекранне слайд-шоу з ефектом польоту фотографій",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "build": "electron-builder --win portable"
+  },
+  "dependencies": {
+    "electron": "^39.8.10"
+  },
+  "devDependencies": {
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "ua.photo.valentin",
+    "productName": "Photo Valentin",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "photos/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "portable"
+    }
+  }
+}
